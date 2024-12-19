@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Monkeystrike Mapping Manual</title>
+</head>
+<body bgcolor=1c371 text=#D2A028 link=#D2A028 vlink=#D2A028 alink=#D2A028>
+<font face="Arial">
+
+
+<center>
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr><td align=middle height=64 width=64 background="../images/m_lup.jpg"></td><td height=64 background="../images/mup.jpg"><center><b>Monkeystrike Mapping Manual</b></center></td><td height=64 width=64 background="../images/m_rup.jpg"></td></tr></table>
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr><td width=34 background="../images/tableleft.jpg"></td>
+<td background="../images/tablemid.jpg"><br><br>
+
+<center><font size=3><u><b>How to get started</b></u></font></center><br>
+
+<li>Alright. First of all you need a good idea. Due to the comic style of this mod nearly every map setting is possible. Not only jungle. Just to give you a few examples: temple, factory, cheesy moonbase, candyland, snowmaps, etc.</li><br><br>
+<li>After that you have to set up your map editor, load the monkeystrike textures and the "<a href="http://www.planethalflife.com/monkeystrike/monkeystrike-fgd.zip">halflife-ms.fgd</a>" file. We assume you know how to do that, because this is not a general mapping tutorial.</li><br><br>
+<li>Ok, once you have chosen a cool map setting and set up your map editor you need to make the game identify your map as a monkeystrike map. All you have to do for that is to place a "<i>info_msdetect</i>" somewhere in your map. This entity doesn't even have any important properties to change, it just needs to be somewhere in your map.</li><br><br>
+<li>Now, just go ahead and build your map. You will find everything else that's important further down in our entity guide.</li><br><br>
+<br><br>
+
+
+<center><font size=3><u><b>Entity Guide</b></u></font></center><br><br>
+
+<li><b><i>info_monkey_start_team_red</i>:</b> Spawn point for Team Strawberry (for <a href=#gameplay>Capture The Golden Banana</a> and <a href=#gameplay>Fruity Sacrifice</a>)</li><br><br>
+<li><b><i>info_monkey_start_team_green</i>:</b> Spawn point for Team Melon (for <a href=#gameplay>Capture The Golden Banana</a> and <a href=#gameplay>Fruity Sacrifice</a>)</li><br><br>
+<li><b><i>info_observer_start</i>:</b> Observer spawn point</li><br><br>
+<li><b><i>info_msdetect</i>:</b> Monkeystrike Entity. Needs to be in every map</li><br><br>
+<li><b><i>info_banana_red_capture</i>:</b> The banana capture point of Team Strawberry (for <a href=#gameplay>Capture The Golden Banana</a> mode)</li><br><br>
+<li><b><i>info_banana_green_capture</i>:</b> The banana capture point of Team Melon (for <a href=#gameplay>Capture The Golden Banana</a> mode)</li><br><br>
+<li><b><i>item_banana</i>:</b> The Golden Banana (for <a href=#gameplay>Capture The Golden Banana</a> mode)</li><br><br>
+<li><b><i>item_fruit</i>:</b> A fruit for Fruity Sacrifice (for <a href=#gameplay>Fruity Sacrifice</a> mode)</li><br><br>
+<li><b><i>fruit_sacrifice_point_team_red</i>:</b> The sacrifice point of Team Strawberry (for <a href=#gameplay>Fruity Sacrifice</a> mode)</li><br><br>
+<li><b><i>fruit_sacrifice_point_team_green</i>:</b> The sacrifice point of Team Melon (for <a href=#gameplay>Fruity Sacrifice</a> mode)</li><br><br>
+<li><b><i>item_bonustime</i>:</b> Bonustime Icon 1. If collected, the player gets twice the points and firerate for 30 seconds and Bonustime Icon 2 spawns 90 seconds after it (for <a href=#gameplay>Deathmatch</a> mode)</li><br><br>
+<li><b><i>item_bonustime2</i>:</b> Bonustime Icon 2. If collected, the player gets twice the points and firerate for 30 seconds and Bonustime Icon 3 spawns 90 seconds after it (for <a href=#gameplay>Deathmatch</a> mode)</li><br><br>
+<li><b><i>item_bonustime3</i>:</b> Bonustime Icon 3. If collected, the player gets twice the points and firerate for 30 seconds and Bonustime Icon 1 spawns 90 seconds after it (for <a href=#gameplay>Deathmatch</a> mode)</li><br><br>
+<li><b><i>palm_tree</i>:</b> A palm that trembles if you shoot it</li><br><br>
+<li><b><i>info_player_deathmatch</i>:</b> Spawn point for Deathmatch mode</li><br><br>
+<li><b><i>item_healthkit</i>:</b> Health Icon</li><br><br>
+<br><br>
+
+
+<a name="gameplay"><center><font size=3><u><b>Gameplay Modes</b></u></font></center></a><br><br>
+
+Every map has a prefix that shows the map's gameplay mode:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- ms_xxx: Deathmatch<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- ctb_xxx: Capture The Golden Banana<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- fs_xxx: Fruity Sacrifice<br><br>
+<li><b><i>Deathmatch</i>:</b> The players spawn at "<i>info_player_deathmatch</i>" entities and have to kill each other. The bonustime is a special item that is only used in Deathmatch maps. The player who collects the bonustime icon gets twice the points and firerate for 30 seconds. Try to place all three bonustime entities in your map at different places in order to avoid camping</li><br><br>
+<li><b><i>Capture The Golden Banana</i>:</b> There are two teams: Team Strawberry (red) and Team Melon (green). Each team has to capture the golden banana which is located in the middle of the map and bring it to the enemy base. So you have to place a "<i>item_banana</i>" in the middle of your map, a "<i>info_banana_red_capture</i>" in the green base and a "<i>info_banana_green_capture</i>" in the red base.</li><br><br>
+<li><b><i>Fruity Sacrifice</i>:</b> There are two teams: Team Strawberry (red) and Team Melon (green). Each team has to collect fruits that lie around in the map and bring them to their sacrifice point to score. So you have to place "<i>item_fruit</i>"s in the map (IMPORTANT: don't place e.g. 3 fruits near the red base and only 1 fruit near the green base), a "<i>info_fruit_sacrifice_point_team_red</i>" in the red base and a "<i>info_fruit_sacrifice_point_team_green</i>" in the green base. A monkey can carry up to three fruits and is able to steal fruits from the enemy sacrifice point</li><br><br>
+<br><br>
+
+
+<center><font size=3><u><b>Some important hints</b></u></font></center><br><br>
+
+<li><b><i>Playersizes</i>:</b> Minimonkey: 36 - Lemur: 54 - Chimpanzee: 72 - Baboon: 72 - Orang Utan: 90 - Gorilla: 108<br>Note: These hull sizes don't work in maps yet.</li><br><br>
+<li><b><i>Textures</i>:</b> You can download our WAD files in the mapping section of our <a href="http://www.monkeystrike.com">website</a>. If you have any special wishes contact us about it</li><br><br>
+<li><b><i>Lemur</i>:</b> The Lemur-class has a backpack, so the player can fly around for a certain period of time. Keep this in mind...</li><br><br>
+<li><b><i>Be inventive!</i></b> Maps for Monkeystrike don't HAVE TO play in the jungle or on an island, don't let your map look like 5 other maps in the MOD</li><br><br>
+
+
+<br><br></td>
+<td width=34 background="../images/tableright.jpg"></td></tr>
+</table>
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr><td align=middle height=64 width=64 background="../images/m_ldown.jpg"></td><td height=64 background="../images/mdown.jpg">&nbsp;</td><td height=64 width=64 background="../images/m_rdown.jpg"></tr>
+</table><br><br>
+

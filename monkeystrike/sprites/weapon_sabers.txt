@@ -1,0 +1,3 @@
+2
+weapon			640 weap4	0	0	256	96
+weapon_s		640 weap4	0	0	256	96
